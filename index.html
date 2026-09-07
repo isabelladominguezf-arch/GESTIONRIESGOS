@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gestión del Riesgo en Salud | SaludVida Integral S.A.S.</title>
+<style>
+:root{--nav:#123b70;--blue:#1677b9;--teal:#159b91;--pink:#e65b8d;--purple:#7552b8;--orange:#ef8b28;--green:#4aa85a;--bg:#f4f8fc;--ink:#17324d}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#123b70,#1677b9);color:white;padding:28px 5%;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #0002}
+header h1{margin:0 0 6px;font-size:clamp(25px,4vw,42px)}header p{margin:0;opacity:.92}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}nav button{border:1px solid #ffffff55;background:#ffffff18;color:white;padding:10px 14px;border-radius:20px;cursor:pointer;font-weight:700}nav button:hover,nav button.active{background:white;color:#123b70}
+main{max-width:1200px;margin:auto;padding:28px 18px 50px}
+.hero{background:white;border-radius:22px;padding:25px;box-shadow:0 6px 25px #17324d14;margin-bottom:25px}
+.hero h2{margin-top:0;color:#123b70}.hero strong{color:#1677b9}
+.section{display:none;animation:fade .3s ease}.section.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:white;border-radius:18px;padding:20px;box-shadow:0 5px 20px #17324d12;border-top:6px solid var(--blue);transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 9px 25px #17324d20}.card h3{margin:5px 0 10px}.card button,.more{border:0;background:var(--blue);color:white;padding:9px 14px;border-radius:18px;cursor:pointer;font-weight:700}
+.clin{border-color:#e65b75}.oper{border-color:#159bd0}.fin{border-color:#ef9b20}.pop{border-color:#4aa85a}.norm{border-color:#7552b8}.rep{border-color:#d54c9d}
+.icon{font-size:30px}.tag{display:inline-block;padding:5px 9px;border-radius:12px;background:#edf5fb;font-size:12px;font-weight:bold;margin:3px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare .card{border-top-color:#7552b8}.compare .card:nth-child(2){border-top-color:#159bd0}
+.phva{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.step{padding:22px;border-radius:18px;color:white;min-height:170px;cursor:pointer}.plan{background:#1677b9}.do{background:#4aa85a}.check{background:#ef8b28}.act{background:#7552b8}.step h3{margin-top:0}
+.flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0}.node{padding:18px;border-radius:50%;width:145px;height:145px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:bold;color:white}.arrow{font-size:30px;color:#6c8296}
+.case{background:linear-gradient(135deg,#eef7ff,#fff);border-left:7px solid #1677b9;padding:22px;border-radius:18px}.result{background:#eaf8ef;border-left:7px solid #4aa85a;padding:20px;border-radius:18px;margin-top:16px}
+ul{line-height:1.65}.quiz{background:#fff7e8;border-radius:18px;padding:20px;margin-top:20px}.quiz button{margin:6px;padding:10px 14px;border:0;border-radius:15px;cursor:pointer;background:#fff;border:1px solid #ddd}.quiz button:hover{background:#edf5fb}.feedback{font-weight:bold;margin-top:10px}
+footer{text-align:center;background:#123b70;color:white;padding:22px}
+@media(max-width:750px){.phva,.compare{grid-template-columns:1fr}.step{min-height:auto}}
+</style>
+</head>
+<body>
+<header>
+<h1>Gestión del Riesgo en Salud</h1>
+<p>Clasificación y metodologías aplicadas al caso <strong>SaludVida Integral S.A.S.</strong></p>
+<nav>
+<button class="active" onclick="show('inicio',this)">Inicio</button>
+<button onclick="show('riesgos',this)">1. Riesgos</button>
+<button onclick="show('metodos',this)">2. Metodologías</button>
+<button onclick="show('phva',this)">3. PHVA</button>
+<button onclick="show('inter',this)">4. Interrelación</button>
+<button onclick="show('caso',this)">5. Caso SaludVida</button>
+</nav>
+</header>
+
+<main>
+<section id="inicio" class="section active">
+<div class="hero"><h2>¿Qué es la gestión del riesgo en salud?</h2>
+<p>Es un proceso sistemático que permite <strong>identificar, analizar, evaluar y tratar</strong> los riesgos que pueden afectar la seguridad del paciente, la calidad de la atención, la sostenibilidad financiera y el cumplimiento institucional.</p>
+<p><strong>Idea clave:</strong> gestionar el riesgo significa anticiparse a los eventos, establecer controles, hacer seguimiento y aprender de los resultados.</p></div>
+<div class="grid">
+<div class="card"><span class="icon">🛡️</span><h3>Anticipar</h3><p>Reconocer amenazas antes de que generen consecuencias.</p></div>
+<div class="card"><span class="icon">🔎</span><h3>Analizar</h3><p>Comprender causas, probabilidad, impacto y controles existentes.</p></div>
+<div class="card"><span class="icon">📈</span><h3>Mejorar</h3><p>Monitorear resultados y ajustar las acciones mediante PHVA.</p></div>
+</div>
+</section>
+
+<section id="riesgos" class="section">
+<div class="hero"><h2>1. Clasificación de los riesgos en salud</h2><p>Haz clic en cada tarjeta para ampliar la información.</p></div>
+<div class="grid">
+<div class="card clin"><div class="icon">🩺</div><h3>Riesgo clínico</h3><p>Posibilidad de daño como consecuencia del proceso de atención.</p><div class="tag">Eventos adversos</div><div class="tag">Errores</div><div class="tag">Infecciones</div><button onclick="modal('Riesgo clínico','Incluye eventos adversos, errores de medicación, infecciones asociadas a la atención y fallas diagnósticas. Puede relacionarse con causas sistémicas y no únicamente con actuaciones individuales.')">Ver más</button></div>
+<div class="card oper"><div class="icon">⚙️</div><h3>Riesgo operacional</h3><p>Fallas en procesos, sistemas, infraestructura o talento humano.</p><div class="tag">Procesos</div><div class="tag">Comunicación</div><div class="tag">Tecnología</div><button onclick="modal('Riesgo operacional','Puede originarse en procesos no estandarizados, fallas de comunicación, sistemas deficientes, infraestructura o capacitación insuficiente.')">Ver más</button></div>
+<div class="card fin"><div class="icon">💰</div><h3>Riesgo financiero</h3><p>Afecta la sostenibilidad económica de la institución.</p><div class="tag">Costos</div><div class="tag">Hospitalizaciones</div><div class="tag">Recursos</div><button onclick="modal('Riesgo financiero','Puede expresarse en incremento de costos, hospitalizaciones evitables, atención de alto costo o uso ineficiente de recursos.')">Ver más</button></div>
+<div class="card pop"><div class="icon">👥</div><h3>Riesgo poblacional o epidemiológico</h3><p>Condiciones de salud y factores de vulnerabilidad de la población.</p><div class="tag">Crónicas</div><div class="tag">Transmisibles</div><div class="tag">Vulnerabilidad</div><button onclick="modal('Riesgo poblacional','Considera enfermedades transmisibles y crónicas, envejecimiento poblacional, determinantes sociales y condiciones de vulnerabilidad del territorio.')">Ver más</button></div>
+<div class="card norm"><div class="icon">📋</div><h3>Riesgo normativo o regulatorio</h3><p>Incumplimiento de leyes, normas o lineamientos aplicables.</p><div class="tag">Auditorías</div><div class="tag">Hallazgos</div><div class="tag">Cumplimiento</div><button onclick="modal('Riesgo normativo','Comprende incumplimientos regulatorios, hallazgos de auditoría y debilidades en la aplicación de lineamientos sectoriales.')">Ver más</button></div>
+<div class="card rep"><div class="icon">🛡️</div><h3>Riesgo reputacional</h3><p>Afecta la confianza de usuarios, trabajadores y demás grupos de interés.</p><div class="tag">Confianza</div><div class="tag">Imagen</div><div class="tag">Quejas</div><button onclick="modal('Riesgo reputacional','Los eventos adversos, incumplimientos y deficiencias de atención pueden deteriorar la confianza y afectar la imagen institucional.')">Ver más</button></div>
+</div>
+</section>
+
+<section id="metodos" class="section">
+<div class="hero"><h2>2. Metodologías: cualitativas vs. cuantitativas</h2><p>Ambas aportan perspectivas diferentes y pueden integrarse para una gestión más completa.</p></div>
+<div class="compare">
+<div class="card"><h3>🧠 Cualitativas</h3><p>Usan juicio experto, análisis de procesos y escenarios para comprender riesgos complejos.</p><h4>Herramientas</h4><ul><li>Matriz y mapa de riesgos</li><li>FODA y escenarios</li><li>FMEA / HAZOP</li><li>Análisis de causa raíz</li><li>Entrevistas y valoración experta</li></ul><button onclick="modal('Metodologías cualitativas','Son útiles para describir el contexto, identificar riesgos emergentes y priorizar situaciones cuando los datos son escasos. Su principal limitación es una mayor subjetividad.')">Ver detalles</button></div>
+<div class="card"><h3>📊 Cuantitativas</h3><p>Usan datos numéricos y modelos para estimar probabilidades, tendencias e impactos.</p><h4>Herramientas</h4><ul><li>Análisis estadístico</li><li>Modelos predictivos</li><li>Regresión</li><li>Simulación Monte Carlo</li><li>Indicadores y segmentación</li></ul><button onclick="modal('Metodologías cuantitativas','Permiten estimar probabilidades, impacto financiero, tendencias epidemiológicas, hospitalizaciones y necesidades de recursos. Dependen de la calidad y disponibilidad de los datos.')">Ver detalles</button></div>
+</div>
+<div class="result"><strong>Recomendación:</strong> combinar métodos cualitativos para comprender y priorizar con métodos cuantitativos para medir, estimar y anticipar.</div>
+</section>
+
+<section id="phva" class="section">
+<div class="hero"><h2>3. Ciclo PHVA aplicado a la gestión del riesgo</h2><p>Haz clic en cada fase para ver cómo se aplica.</p></div>
+<div class="phva">
+<div class="step plan" onclick="modal('PLANEAR','Identificar riesgos, analizar causas y consecuencias, valorar probabilidad e impacto, priorizar y definir controles.')"><h3>1. PLANEAR</h3><p>Identificar y analizar</p></div>
+<div class="step do" onclick="modal('HACER','Implementar controles, protocolos, capacitación, responsables y planes de intervención.')"><h3>2. HACER</h3><p>Implementar</p></div>
+<div class="step check" onclick="modal('VERIFICAR','Revisar indicadores, evaluar controles, analizar eventos adversos y comparar resultados con las metas.')"><h3>3. VERIFICAR</h3><p>Medir y monitorear</p></div>
+<div class="step act" onclick="modal('ACTUAR','Implementar acciones correctivas, ajustar controles, actualizar procedimientos y reiniciar el ciclo.')"><h3>4. ACTUAR</h3><p>Corregir y mejorar</p></div>
+</div>
+<div class="hero"><h3>🔄 ¿Por qué es importante?</h3><p>El PHVA convierte la gestión del riesgo en un proceso continuo: no basta con identificar riesgos; es necesario comprobar si los controles funcionan y modificarlos cuando los resultados muestran nuevas necesidades.</p></div>
+</section>
+
+<section id="inter" class="section">
+<div class="hero"><h2>4. Interrelación de los riesgos</h2><p>Los riesgos clínicos, operacionales, financieros y organizacionales no deben analizarse como áreas aisladas.</p></div>
+<div class="flow">
+<div class="node clin" style="background:#e65b75">Riesgo<br>clínico</div><div class="arrow">↔</div>
+<div class="node fin" style="background:#ef9b20">Riesgo<br>financiero</div><div class="arrow">↔</div>
+<div class="node oper" style="background:#1677b9">Riesgo<br>operacional</div>
+</div>
+<div class="case"><h3>Ejemplo aplicado a SaludVida</h3><p>Una falla en el seguimiento clínico de un paciente de alto riesgo puede producir una complicación, aumentar las hospitalizaciones evitables y elevar los costos. A su vez, la presión sobre los recursos puede afectar procesos y generar nuevos riesgos.</p></div>
+<div class="result"><strong>Enfoque integral:</strong> identificar cómo un riesgo puede desencadenar o aumentar otros riesgos y establecer controles coordinados.</div>
+</section>
+
+<section id="caso" class="section">
+<div class="hero"><h2>5. Aplicación al caso SaludVida Integral S.A.S.</h2><p>De una gestión fragmentada y reactiva a un modelo integrado y preventivo.</p></div>
+<div class="case"><h3>⚠️ Situación encontrada</h3>
+<ul><li>Matrices de riesgo aisladas por área.</li><li>Ausencia de una metodología institucional unificada.</li><li>Eventos adversos sin análisis sistemático de causas.</li><li>Debilidades en indicadores y planes documentados.</li><li>Falta de integración entre riesgo clínico y financiero.</li><li>Sin modelo predictivo ni segmentación estandarizada para pacientes de alto costo.</li></ul></div>
+<h3>🎯 Propuesta metodológica integrada</h3>
+<div class="grid">
+<div class="card"><h3>ISO 31000</h3><p>Usarla como marco general para integrar la gestión del riesgo en la organización y en la toma de decisiones.</p></div>
+<div class="card"><h3>Matriz institucional</h3><p>Unificar identificación, análisis, valoración, controles, responsables y seguimiento.</p></div>
+<div class="card"><h3>FMEA + causa raíz</h3><p>Anticipar fallas en procesos críticos y aprender sistemáticamente de eventos ocurridos.</p></div>
+<div class="card"><h3>Análisis cuantitativo</h3><p>Usar datos para segmentar pacientes, estimar costos, identificar tendencias y anticipar hospitalizaciones.</p></div>
+<div class="card"><h3>PHVA</h3><p>Monitorear resultados, evaluar controles y mantener la mejora continua.</p></div>
+</div>
+<div class="result"><strong>Resultado esperado:</strong> fortalecer la seguridad del paciente, optimizar el uso de recursos, disminuir hospitalizaciones evitables y consolidar una cultura organizacional orientada a la prevención.</div>
+<div class="quiz"><h3>🧩 Mini reto</h3><p>En el caso SaludVida, ¿qué metodología ayuda especialmente a anticipar fallas de un proceso antes de que ocurran eventos?</p>
+<button onclick="answer(false)">Análisis de causa raíz</button><button onclick="answer(true)">FMEA</button><button onclick="answer(false)">PHVA solamente</button><div id="feedback" class="feedback"></div></div>
+</section>
+</main>
+<footer>“La gestión del riesgo no es un gasto: es una inversión en calidad, seguridad y confianza.”<br>SaludVida Integral S.A.S.</footer>
+
+<div id="modal" style="display:none;position:fixed;inset:0;background:#0008;z-index:30;align-items:center;justify-content:center;padding:20px">
+<div style="background:white;max-width:650px;width:100%;border-radius:22px;padding:28px;position:relative;box-shadow:0 15px 50px #0005">
+<button onclick="closeModal()" style="position:absolute;right:16px;top:12px;border:0;background:#eee;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:20px">×</button>
+<h2 id="mtitle"></h2><p id="mbody" style="line-height:1.7"></p>
+</div></div>
+<script>
+function show(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function modal(t,b){document.getElementById('mtitle').textContent=t;document.getElementById('mbody').textContent=b;document.getElementById('modal').style.display='flex'}
+function closeModal(){document.getElementById('modal').style.display='none'}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()})
+function answer(ok){let f=document.getElementById('feedback');f.textContent=ok?'¡Correcto! FMEA es una metodología preventiva que permite anticipar modos de falla y priorizar acciones.':'Casi. Piensa en una metodología prospectiva que busca anticipar modos de falla antes de que produzcan consecuencias.';f.style.color=ok?'#2f8a45':'#b45a00'}
+</script>
+</body>
+</html>
